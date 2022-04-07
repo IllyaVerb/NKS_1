@@ -29,8 +29,11 @@ int main()
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 
+    double tcp = 0.0;
+    for (int i=0; i<array_size; i++)
+        tcp += array_list[i];
     double divider = *max_element(array_list , array_list + array_size)/10.0;
-    cout << "Середній наробіток до відмови Tср = " << divider << endl;
+    cout << "Середній наробіток до відмови Tср = " << tcp/array_size << endl;
 
     sort(array_list, array_list + array_size);
     cout << "Відсортована вибірка:" << endl;
